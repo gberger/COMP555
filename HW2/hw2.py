@@ -138,7 +138,7 @@ def print_stats(codons):
 		if total_for_amino == 0:
 			total_for_amino = 1;
 		
-		for synonym in synonyms:
+		for synonym in sorted(synonyms):
 			s += "[%s %d %.2f%%] " % (
 					synonym, 
 					occurrences[synonym],
