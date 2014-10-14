@@ -123,8 +123,8 @@ def codons_until_stop(codons):
 # how many times it occurs and the percentage over all the synonyms for this
 # amino acid.
 def print_stats(codons):
-	occurrences = {key: 0 for key in codon_table.keys()}
-
+	occurrences = dict((key, 0) for key in codon_table.keys())
+	
 	for codon in codons:
 		occurrences[codon] += 1
 
